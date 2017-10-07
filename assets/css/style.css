@@ -1,0 +1,21 @@
+body {
+	background: url("../images/bey2.jpg");
+    background-size: 100%;
+    color: white;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+#start {
+	text-align: center;
+}
+
+#blankSpaces {
+	text-align: center;
+}
