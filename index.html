@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <title>Beyonce Songs Hangman</title>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
    </head>
@@ -12,22 +13,22 @@
       <div class="wrapper">
          <h1>GUESS</h1>
       </div>
-      <br><br>
+      <br>
       <div>
          <h2>A Beyonce-Themed Hangman Game</h2>
       </div>
+      <br><br>
+      <div id="blankSpaces"></div>
       <br><br>
       <div>
          <p id="start">Press any letter key to guess.</p>
       </div>
       <br><br>
-      <div id="blankSpaces"></div>
-      <br><br>
-      <div id="guessed"></div>
+      <div id="guessed">GUESSED</div>
       <br><br>
       <div>
          <!-- displays number of remaining guesses-->
-         <p id="remaining"></p>
+         <p id="remaining">REMAINING</p>
       </div>
       <br><br>
       <div>
@@ -35,47 +36,7 @@
          <p id="wins"></p>
       </div>
 
-<script>
- $(document).ready(function() {
- 	//score begins with 0 wins
- 	var score = 0;
- 	var remainingChances = 10;
- 	var lettersGuessed;
- 	
- 	//array of words to guess
- 	var songArray = ["formation", "platinum", "flawless", "queen", "elevator", "twins", "irreplaceable", "countdown", "solange", "lemonade", "superbowl", "blonde", "houston", "bootylicious"
- 	];
- 
- 	//variable that randomly selects a word 
- 	var randomSong = songArray[Math.floor(Math.random() * songArray.length)];
- 	console.log(randomSong);
- 
- 	//empty array to which blank spaces will be added according to the randomly chosen word from songArray
- 	var answerArray = [];
- 	//for loop to add appropriate number of "_"
- 	for (var i = 0; i < randomSong.length; i++) {
-  	  		answerArray[i] = " _ ";
-  	  		console.log(answerArray);
-	//send blank spaces to #blankSpaces on page
-  	  $("#blankSpaces").text(answerArray.join(""));
-  	
-  	//register keypress
-  	document.onkeyup = function() {
-  		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-  		console.log(userGuess);
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-
-  	
-
-  	//search array for matching characters
-
-  		//if keypress matches character in array, replace "_" with correct letter.
-
-  		//else add keypress to #guessed and decrease remaining chances by 1
- }  		
- }
- }
- )
-</script>
 </body>
 </html>

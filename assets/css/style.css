@@ -5,17 +5,31 @@ body {
 }
 
 h1 {
+	font-size: 100px;
+	letter-spacing: 20px;
+	font-family: 'Anton', sans-serif;
 	text-align: center;
 }
 
 h2 {
+	font-family: 'Lobster', cursive;
 	text-align: center;
 }
 
 #start {
+	font-family: 'Anton', sans-serif;
 	text-align: center;
 }
 
 #blankSpaces {
+	margin-top: 220px;
+	margin-bottom: 10px;
+	font-size: 70px;
+	letter-spacing: 10px;
+	text-align: center;
+}
+
+#guessed, #remaining {
+	font-family: 'Anton', sans-serif;
 	text-align: center;
 }
